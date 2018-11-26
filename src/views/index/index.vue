@@ -40,13 +40,13 @@ export default {
 
     // 拼装当前iframe的真实链接地址，可直接访问
     let thost = window.location.href
-    this.mainDom = thost.substring(0, thost.length - 1)
+    this.mainDom =thost
   },
   data() {
     return {
       mainDom: '', //页面的域名
       openMeuns: 'china', //菜单默认打开的页面
-      getPagePath: '/china.html', //控制iframe的地址,默认国家页面
+      getPagePath: 'china.html', //控制iframe的地址,默认国家页面
     }
   },
   methods: {
@@ -57,7 +57,7 @@ export default {
 
     },
     baseSelect(key) { //根据菜单的选择决定iframe的地址
-      let setUrl = "/" + key.split("-").join('/') + '.html'
+      let setUrl =  key.split("-").join('/') + '.html'
       this.getPagePath = setUrl
     }
   }
