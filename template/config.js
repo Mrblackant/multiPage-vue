@@ -2,7 +2,7 @@
 let baseMounted = localStorage.getItem('baseUrl')
 console.log(baseMounted)
 
-import '../src/style/index.scss' //公用样式
+import '../src/style/index.css' //公用样式
 
 if (baseMounted === 'noNeed') {
   // 组件自己创建了实，将不会再引入下边的资源
